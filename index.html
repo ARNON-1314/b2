@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Childhood Memories</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #d8faff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.memory-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.memory-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.memory-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(85%);
+  transition: 0.4s;
+}
+
+.memory-box:hover img {
+  filter: brightness(60%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.memory-box:hover .overlay {
+  opacity: 1;
+}
+
+/* Unique styling for sis and brother */
+.sis {
+  border: 3px solid #ffb6d9;
+  background: linear-gradient(to top right, #ffe6f1, #ffd3ec);
+}
+.bro {
+  border: 3px solid #aee4ff;
+  background: linear-gradient(to top right, #d6f5ff, #b3e5ff);
+}
+
+.overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1rem;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+/* Floating animation for soft touch */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.memory-box {
+  animation: float 4s ease-in-out infinite;
+}
+.container .btn {
+
+
+	position: relative;
+	top: 0;
+	left: 50px;
+	width: 300px;
+	height: 50px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .btn a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 400px;
+	z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
+.container .btn:hover a {
+	letter-spacing: 3px;
+}
+.container .btn a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+	transform: skewX(45deg) translate(0);
+	transition: 0.5s;
+	filter: blur(0px);
+}
+.container .btn:hover a::before {
+	transform: skewX(45deg) translate(200px);
+}
+.container .btn::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .btn:hover::before /*lightup button*/ {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+.container .btn::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	top: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .btn:hover::after /*lightup button*/ {
+	top: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+.container .btn:nth-child(1)::before, /* 2*/
+.container .btn:nth-child(1)::after {
+	background: #2db2ff;
+	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
+		0 0 60px #2db2ff;
+}
+
+</style>
+</head>
+<body>
+
+<div class="cont">
+  
+  <div class="memory-box sis">
+    <img src="./PHOTO-2025-10-19-00-45-16.jpg" alt="Sister childhood">
+    <div class="overlay">
+      <h2>VINCIIIIIIIIIIIII🎀🎀🥹🫂</h2>
+      <p>I want u to smile forever💗♾️ and be my lil girl🥹💖 forever, I wasn't part
+         of your childhood but I will make sure that we will live our childhood again together now😭🌺💖
+         and we will create alot of happy memories. I know that ur childhood was terrible and full of 
+         sufferings but now I m with u🥹🥹 the timeline of your sufferings has gone😤😤 now coz your aruuuuuuuuu is with u nowww💕😭.
+        I will never let you feel alone, i know i had made mistakes that can't be ignored or be forgiven, but my love for u is enormous🥹🎀.
+      And i can proudly say that you are not alone anymore. My lil girl will be always under my protection,and never let anyone hurt u again and 
+      never let u cry again😭💗(if it is urr aruuuuuu then also it will be not acceptable).
+<br><br>
+       VINCIIIIIIIII  u will always be my lil girl who's smile seems world to me💗😭 and your voice comforts me in this noisy world😭🫂. My Cheeks are soo soo preety😭💕</p>
+    </div>
+  </div>
+
+  <div class="memory-box bro">
+    <img src="./WhatsApp Image 2025-10-19 at 00.47.47.jpeg" alt="Brother childhood">
+    <div class="overlay">
+      <h2>ARUUUUUUUUU💗🥹</h2>
+      <p>I m telling u the secret of your aruuuuuuu don't tell to anyone uhhkkk, he is only ur 
+        brother and without u this duffer boy is nothing💖 ARUUUUUUU==VINCIIIIIIIII. He will be the biggest supporter of your dreams 
+        and ambitions🥹💗, he will always be there to catch u when u will fall down😭💖. This duffer boy never knew that he will have 
+        a sister like u🥹💗, he never knew that he will have a best friend like u😭💗. He never knew that he will have a person who will
+        always be there for him💪, to share his secrets😁, his joys🥹, and his sorrows🫂. He never knew that he will have a bond so special🥹🫂,
+        so unbreakable, that it will last a lifetime. He never knew that he will have you, his beloved sister, by his side forever and ever in every universe🥹.💖
+
+      <br><br>
+       If i would have a chance to choose u you as my sis in next life😭🫂, I would choose you every time.💖
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+		<div class="btn"><a href="https://arnon-1314.github.io/b4/">CHAPTER 2 -THE POOKIES -></a></div>
+    </div>
+</body>
+</html>
